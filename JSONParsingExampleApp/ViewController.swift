@@ -5,7 +5,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var romashka: UIActivityIndicatorView!
+    @IBOutlet weak var chamomile: UIActivityIndicatorView!
     @IBOutlet weak var tempInfoLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     let imageUrl = "https://mytravelry.com/ru/wp-content/uploads/sites/2/2019/01/Eifel-COVER.jpg"
@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        romashka.startAnimating()
-        romashka.hidesWhenStopped = true
+        chamomile.startAnimating()
+        chamomile.hidesWhenStopped = true
         getImage()
         parsingJSON()
     }
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                 do{
                     let temper = try JSONDecoder().decode(Temp.self, from: data)
                     self.tempInfoLabel.text = "Current temp in Paris:\n~\(String(round(10*(temper.current.temp))/10)) °"
-                    self.romashka.stopAnimating()
+                    self.chamomile.stopAnimating()
                 }catch {
                     print(error.localizedDescription)
                 }

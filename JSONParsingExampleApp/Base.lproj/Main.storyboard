@@ -46,8 +46,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chamomile" destination="VGc-fN-Tps" id="eq7-aU-lgH"/>
                         <outlet property="image" destination="nnC-el-iYv" id="oBA-Og-K07"/>
-                        <outlet property="romashka" destination="VGc-fN-Tps" id="eq7-aU-lgH"/>
                         <outlet property="tempInfoLabel" destination="X1o-F8-1zz" id="T6I-l6-ivo"/>
                     </connections>
                 </viewController>
